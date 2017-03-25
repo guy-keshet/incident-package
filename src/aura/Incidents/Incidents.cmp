@@ -1,0 +1,25 @@
+<aura:component controller="IncidentController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:attribute name="incidents" type="Incident__c[]"/> 
+  <aura:attribute name="total" type="Double" default="0.00" />
+  
+  <!-- Display Incident records, if there are any -->
+  
+          <div class="container slds-p-top--medium">
+              <div id="list" class="row">
+                 <aura:iteration items="{!v.incidents}" var="incident">
+                     <p class="slds-notify slds-notify--toast slds-theme--error slds-theme--alert-texture">
+                        Current Incident: {!incident.keshet__Console_Label__c}, 
+                         <p/>Current Status:  {!incident.keshet__Status__c}
+                         <aura:if isTrue="!incident.keshet__Start_date__c">
+                             Start Date: {!incident.keshet__Start_date__c}
+                         </aura:if>
+                         <p/>
+                        Customer's advice: {!incident.keshet__Note_to_Customers__c},
+                     </p>            
+                </aura:iteration>
+   
+              </div>
+          </div> 
+
+</aura:component>

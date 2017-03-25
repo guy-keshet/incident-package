@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representing an occurrence of a major incident which can be linked to multiple cases</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Case_Closed_Comment__c</fullName>
+        <description>Text entered here will be added as case comments on cases closed when the incident is resolved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text entered here will be added as case comments on cases closed when the incident is resolved</inlineHelpText>
+        <label>Case Closed Comment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Console_Label__c</fullName>
+        <description>Text entered here will appear on the service agent&apos;s console</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text entered here will appear on the service agent&apos;s console</inlineHelpText>
+        <label>Console Label</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Details of the Incident</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the current incident</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Email_customers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates wether to send updates by email to customers (note: only works for customers where the case is linked to a contact, that has an email address, and only up to your org daily mass email limit)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if you want to send an email with the &apos;note to customers&apos; to customers, where the case is linked to a contact, and the contact has an email address populated. Note: only works up to your org&apos;s daily mass email limit</inlineHelpText>
+        <label>Email customers?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>When did the incident end</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When did the incident end</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Note_to_Customers__c</fullName>
+        <description>Message to use when advising customers about the incident</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Message to use when advising customers about the incident</inlineHelpText>
+        <label>Note to Customers</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Self_service_label__c</fullName>
+        <description>Text entered here can be displayed on the company&apos;s web site</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text entered here can be displayed on the company&apos;s web site (requires adding a component to the site)</inlineHelpText>
+        <label>Self service label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>When did the incident start</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When did the incident start</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Incident Status (Active, Resolved or Archived)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Incident Status (Active, Resolved or Archived)</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>customerEmailText__c</fullName>
+        <description>email body for email sent to customers (up to 255 characters)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>email body for email sent to customers (up to 255 characters)</inlineHelpText>
+        <label>customerEmailText</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>emailSubject__c</fullName>
+        <description>Subject of your update email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subject of your update email</inlineHelpText>
+        <label>emailSubject</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fromAddress__c</fullName>
+        <description>fromAddress to be used on email updates sent to customers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>fromAddress to be used on email updates sent to customers</inlineHelpText>
+        <label>fromAddress</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <label>Incident</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Incident Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Incidents</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>Populate_case_closed_comments_on_resolut</fullName>
+        <active>true</active>
+        <description>When resolving an incident, case closed comment field must be filled</description>
+        <errorConditionFormula>AND(OR( ISBLANK( Case_Closed_Comment__c  ), ISNULL( Case_Closed_Comment__c )), OR( ISPICKVAL(Status__c,&quot;Resolved&quot;),ISPICKVAL(Status__c,&quot;Archived&quot;)))</errorConditionFormula>
+        <errorDisplayField>Case_Closed_Comment__c</errorDisplayField>
+        <errorMessage>Before Resolving/Archiving the Incident, please make sure the Case Closed Comment field is populated</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>populate_email_subject</fullName>
+        <active>true</active>
+        <errorConditionFormula>Email_customers__c  &amp;&amp;  ISBLANK( emailSubject__c )</errorConditionFormula>
+        <errorDisplayField>emailSubject__c</errorDisplayField>
+        <errorMessage>Please populate the email subject</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>populate_email_text</fullName>
+        <active>true</active>
+        <errorConditionFormula>Email_customers__c  &amp;&amp;  ISBLANK(customerEmailText__c )</errorConditionFormula>
+        <errorDisplayField>customerEmailText__c</errorDisplayField>
+        <errorMessage>Please populate the email text to be sent to customers</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>populate_fromaddress</fullName>
+        <active>true</active>
+        <errorConditionFormula>Email_customers__c  &amp;&amp;  ISBLANK( fromAddress__c )</errorConditionFormula>
+        <errorDisplayField>fromAddress__c</errorDisplayField>
+        <errorMessage>please populate the from address for sending out an email</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,57 @@
+<aura:component controller="IncidentEmailAllCaseContactsController"
+                implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="incident" type="Incident__c" />
+    <aura:attribute name="hasErrors" type="Boolean"
+        description="Indicate if there were failures when validating the contact." />
+
+    
+
+    <!-- Display a header with details about the account -->
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small
+            slds-truncate slds-align-left">Email affected contacts (linked to Cases)</h1>
+    </div>
+
+    <!-- Display form validation errors, if any -->
+    <aura:if isTrue="{!v.hasErrors}">
+        <div class="recordSaveError">
+            <ui:message title="Error" severity="error" closable="true">
+                The action failed because it's not valid.
+                Please review and correct the errors in the form.
+            </ui:message>
+        </div>
+    </aura:if>
+    <!-- Display the email data -->
+    <div class="slds-panel__section">
+      <h3 class="slds-text-heading--small slds-m-bottom--medium">Email Fields</h3>
+      <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+        <span class="slds-form-element__label">reply to Address</span>
+        <div class="slds-form-element__control">
+          <span class="slds-form-element__static"><ui:outputText value="{!v.incident.keshet__fromAddress__c}" /> </span>
+        </div>
+      </div>
+      <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+        <span class="slds-form-element__label">email subject</span>
+        <div class="slds-form-element__control">
+          <span class="slds-form-element__static"><ui:outputText value="{!v.incident.keshet__emailSubject__c}" /> </span>
+        </div>
+      </div>
+      <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+        <span class="slds-form-element__label">email Body</span>
+        <div class="slds-form-element__control">
+          <span class="slds-form-element__static"><ui:outputText value="{!v.incident.keshet__customerEmailText__c}" /> </span>
+        </div>
+      </div>
+    </div>
+    <!-- Display the email form -->
+    <div class="slds-form--stacked">
+		<div class="slds-form-element">
+            <ui:button label="Cancel" press="{!c.handleCancel}"
+                class="slds-button slds-button--neutral" />
+            <ui:button label="Email all Case Contacts" press="{!c.handleEmail}"
+                class="slds-button slds-button--brand" />
+        </div>
+    </div>
+</aura:component>

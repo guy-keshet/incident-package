@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>The Case Status used when an incident is closed</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Close_Reason__c</fullName>
+        <defaultValue>&apos;Incident Closed&apos;</defaultValue>
+        <description>The case reason picklist value to be used when closing a case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The case reason picklist value to be used when closing a case (if none is populated, a default &apos;Incident closed&apos; reason is used in code)</inlineHelpText>
+        <label>Close Reason</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StatusName__c</fullName>
+        <defaultValue>&apos;Closed&apos;</defaultValue>
+        <description>The Picklist value to be used when automatically closing cases by closing an incident</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Picklist value to be used when automatically closing cases by closing an incident</inlineHelpText>
+        <label>StatusName</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Incident Closed Case Status</label>
+    <visibility>Public</visibility>
+</CustomObject>

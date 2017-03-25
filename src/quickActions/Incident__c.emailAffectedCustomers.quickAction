@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>trigger an email update to all affected customers (case contacts)</description>
+    <height>400</height>
+    <label>Send Email To All Case Contacts</label>
+    <lightningComponent>keshet__IncidentEmailAllCaseContactsAction</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>
